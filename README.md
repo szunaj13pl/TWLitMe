@@ -1,46 +1,79 @@
-# Overview
 
-This package allows us to utilize TailwindCSS from within LitElement components.
+# Tailwind CSS to Lit Converter
 
-We need to setup the TailwindCSS build process as normal (either via running npx tailwindcss or by configuring it as a PostCSS plugind). See the TailwindCSS site for detils on this.
+This package allows us to utilize TailwindCSS from within LitElement components. It is designed to also work with [bun](https://bun.sh/) UNIX systems and it is compatible with WSL2.
 
-Once you have tailwind setup to scan the LitElement for classes and produce a CSS file, TWLit then looks for changes to this file and then creates a JS file from it that can be imported to the Static Styles propert of you LitElement. This gives us a nice DX in that Tailwind classes added to your LitElement are automatically generated and can be used with no manual build step required.
+## Overview
+
+We need to setup the TailwindCSS build process as normal. Once you have tailwind setup to scan the LitElement for classes and produce a CSS file, TWLit then looks for changes to this file and then creates a JS file from it that can be imported to the Static Styles property of your LitElement. This gives us a nice DX in that Tailwind classes added to your LitElement are automatically generated and can be used with no manual build step required.
 
 This approach also means we use the constructable style sheets functionality that LitElement provides and as such the style sheet will not be duplicated if more than one of our LitElement components are present in the application.
 
-A Full working example of this in use can be found here:
-https://github.com/MarkJamesHoward/TWLitExampleUse
+## Usage
 
-# Usage
+1. Install the script:
+
+```bash
+# node
+npm install --save-dev twlitme
+
+# bun
+bun install --dev twlitme
+```
+
+2. Run the script:
+
+```bash
+# node
+node index.js --input <input_file> --output <output_file> [--watch]
+
+# bun
+bun index.js --input <input_file> --output <output_file> [--watch]
+```
+
+Replace `<input_file>` with the path to your Tailwind CSS file and `<output_file>` with the path where you want the JavaScript file to be written.
+
+The `--watch` flag is optional. If provided, the script will keep watching the input file for changes and re-run the conversion whenever the file is modified.
 
 ### Run from the command line
 
-`npx twlit --input ./tw.css --output ./twlit.js`
+```bash
+# node
+npx twlitme --input ./tw.css --output ./twlit.js
+
+# bun
+bunx --bun twlitme --input ./tw.css --output ./twlit.js
+```
 
 ### Or add to your tooling chain in package.json
 
-`"scripts": {
-"dev" : "twlit --input ./tw.css --output ./twlit.js"
-}`
+```json
+# package.json
+
+"scripts": {
+    "dev" : "twlitme --input ./tw.css --output ./twlit.js --watch"
+}
+```
 
 The process will constantly watch the input file and output a new JS file on each change.
 
-# Parameters
+## Example
 
-### --input
+```bash
+# node
+node index.js --input ./TailwindGenerated.css --output ./ReadyForLitimport.js --watch
 
-Specify the location of your tailwind generated CSS file. In the above example this is the 'tw.css' file. This is the file spit out from running either npx tailwindcss or from your PostCSS setup of tailwind. Either way it contains all the class definitions that we need inside of our LitElement
+# bun
+bun index.js --input ./TailwindGenerated.css --output ./ReadyForLitimport.js --watch
+```
 
-### --output
+This command will convert `TailwindGenerated.css` into `ReadyForLitimport.js` and keep watching `TailwindGenerated.css` for changes.
 
-The output is a JS file that contains all the Tailwind classes within a tagged template literal. This can now be imported into your LitElement
+## License
 
-# LitElement configuration:
+MIT
 
-We need to import the JS file that is spit out (from --output above)
+## Author
 
-`import { TWStyles } from "./tailwind/twlit.js";`
+This file was authored by GitHub Copilot.
 
-And then include this in the static Styles property of our LitElement:
-
-` static styles = [css``, TWStyles];  `

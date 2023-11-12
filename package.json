@@ -1,31 +1,41 @@
 {
-  "name": "twlit",
-  "version": "0.0.1-alpha.37",
-  "description": "",
-  "main": "./bin/index.js",
+  "name": "twlitme",
+  "version": "1.0.0",
+  "description": "compiles tailwindcss classes to lit-element styles",
+  "main": "dist/index.js",
   "bin": {
-    "twlit": "./bin/index.js"
+    "twlit": "dist/index.js"
   },
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/markjameshoward/twlit.git"
+    "url": "https://github.com/szunaj13pl/TWLitMe.git"
   },
   "type": "module",
   "keywords": [
     "lit",
     "litelement",
     "tailwindcss",
-    "tailwind"
+    "tailwind",
+    "bun"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "szunaj13pl",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
+    "lint": "tsc"
+  },
   "devDependencies": {
-    "typescript": "^5.0.4"
+    "@changesets/cli": "^2.26.2",
+    "typescript": "^5",
+    "tsup": "^6.5.0"
   },
   "dependencies": {
-    "yargs": "^17.7.2",
-    "@types/node": "^20.2.3",
-    "@types/yargs": "^17.0.24",
-    "tailwindcss": "^3.3.2"
+    "yargs": "^17",
+    "@types/node": "^20",
+    "@types/yargs": "^17",
+    "tailwindcss": "^3"
   }
 }
