@@ -50,9 +50,8 @@ This command will convert `TailwindGenerated.css` into `ReadyForLitimport.js` an
 
 ### Or add to your tooling chain in package.json
 
+`package.json`
 ```json
-// package.json
-
 "scripts": {
     "dev" : "twlitme --input ./tw.css --output ./twlit.js --watch"
 }
