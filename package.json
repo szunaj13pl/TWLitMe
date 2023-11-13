@@ -1,6 +1,6 @@
 {
   "name": "twlitme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "compiles tailwindcss classes to lit-element styles",
   "main": "dist/index.js",
   "bin": {

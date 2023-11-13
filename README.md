@@ -39,21 +39,35 @@ The `--watch` flag is optional. If provided, the script will keep watching the i
 
 ```bash
 # node
-npx twlitme --input ./TailwindGenerated.css --output ./ReadyForLitimport.js --watch
+npx twlitme --input ./TailwindGenerated.css --output ./ReadyForLitImport.js --watch
 
 # bun
-bunx --bun twlitme --input ./TailwindGenerated.css --output ./ReadyForLitimport.js --watch
+bunx --bun twlitme --input ./TailwindGenerated.css --output ./ReadyForLitImport.js --watch
 ```
 
-This command will convert `TailwindGenerated.css` into `ReadyForLitimport.js` and keep watching `TailwindGenerated.css` for changes.
+This command will convert `TailwindGenerated.css` into `ReadyForLitImport.js` and keep watching `TailwindGenerated.css` for changes.
 
+`my-element.ts`
+```typescript
+import { TWStyles } from "../ReadyForLitImport.js";
+...
+@customElement('my-element')
+export class MyElement extends LitElement {
+    ...
+ static styles = [TWStyles, css`
+    :host {
+        --tailwind-lit-me: 🔥;
+    }
+  `]
+```
 
 ### Or add to your tooling chain in package.json
 
 `package.json`
 ```json
 "scripts": {
-    "dev" : "twlitme --input ./tw.css --output ./twlit.js --watch"
+    "twlitme" : "twlitme --input ./TailwindGenerated.css --output ./ReadyForLitImport.js"
+    "twlitme:watch" : "twlitme --input ./TailwindGenerated.css --output ./ReadyForLitImport.js --watch"
 }
 ```
 
@@ -62,8 +76,3 @@ The process will constantly watch the input file and output a new JS file on eac
 ## License
 
 MIT
-
-## Author
-
-This file was authored by GitHub Copilot.
-
