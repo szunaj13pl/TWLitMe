@@ -1,0 +1,146 @@
+repo_name: szunaj13pl/TWLitMe
+report_id: eb3529674ee2bd6ba7d68f099ca72576
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T19:46:40+00:00'
+requested_by: szunaj13pl
+provider: github
+branch: main
+detected_tools_count: 11
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Janusz Ładecki
+  last_updated_on: 2023-11-12 08:14:06.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: MarkJamesHoward
+  last_updated_on: 2023-05-23 07:15:15.000000000 Z
+- name: Tailwind CSS
+  description: A utility-first CSS framework for rapid UI development
+  website_url: https://tailwindcss.com
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Front-End Frameworks
+  image_url: https://img.stackshare.io/service/8158/default_660b7c41c3ba489cb581eec89c04655404258c19.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Janusz Ładecki
+  last_updated_on: 2023-11-12 08:14:06.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/.github/workflows/main.yml
+  detection_source: ".github/workflows/main.yml"
+  last_updated_by: Janusz Ładecki
+  last_updated_on: 2023-11-12 08:14:06.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: MarkJamesHoward
+  last_updated_on: 2023-05-23 07:15:15.000000000 Z
+- name: "@types/node"
+  description: TypeScript definitions for Node.js
+  package_url: https://www.npmjs.com/@types/node
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Janusz Ładecki
+  last_updated_on: 2023-11-12 08:14:06.000000000 Z
+- name: "@types/yargs"
+  description: TypeScript definitions for yargs
+  package_url: https://www.npmjs.com/@types/yargs
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16404/default_9ae0e75ed749aca83d89f7e1ccb309be2bfc610e.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Janusz Ładecki
+  last_updated_on: 2023-11-12 08:14:06.000000000 Z
+- name: tailwindcss
+  description: A utility-first CSS framework for rapidly building custom user interfaces
+  package_url: https://www.npmjs.com/tailwindcss
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17398/default_2cd7ed1c123f2fca074a6f4b16c4e73d5bfe82be.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Janusz Ładecki
+  last_updated_on: 2023-11-12 08:14:06.000000000 Z
+- name: yargs
+  description: Yargs the modern, pirate-themed, successor to optimist
+  package_url: https://www.npmjs.com/yargs
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15887/default_3af1504b6f77c55205ba630fe08c472f43b95f6e.png
+  detection_source_url: https://github.com/szunaj13pl/TWLitMe/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Janusz Ładecki
+  last_updated_on: 2023-11-12 08:14:06.000000000 Z
